@@ -16,13 +16,14 @@ def _init() -> KokkoroBot:
     else:
         raise NotImplementedError
 
-def _quart_init(bot):
+kkr_bot: KokkoroBot = _init()
+
+def _quart_init():
     if config.BOT_TYPE == "wechat_enterprise":
-        return bot.app
+        return kkr_bot.app
     else:
         return Quart(__name__)
 
-kkr_bot: KokkoroBot = _init()
 quart_app : Quart = _quart_init(kkr_bot)
 
 

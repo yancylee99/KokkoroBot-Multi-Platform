@@ -51,8 +51,8 @@ class KokkoroWechatEpBot(KokkoroBot):
     def __init__(self, config):
         self.config = config
         super().kkr_load_modules(self.config)
-        self.app = Quart(__name__)
-        self.app.route("/wechat", methods=["GET", "POST"])(wechat_handler(self))
+        self.quart_app = Quart(__name__)
+        self.quart_app.route("/wechat", methods=["GET", "POST"])(wechat_handler(self))
         self.ret_val = None
 
     def kkr_event_adaptor(self, raw_event: BaseMessage) -> EventInterface:
@@ -66,4 +66,4 @@ class KokkoroWechatEpBot(KokkoroBot):
             raise NotImplementedError
 
     def kkr_run(self):
-        self.app.run("0.0.0.0", 5001, debug=True)
+        self.quart_app.run("0.0.0.0", 5001, debug=True)

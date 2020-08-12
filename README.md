@@ -163,7 +163,8 @@ KokkoroBot 在基础设施与应用层中加一层统一接口 `common_interface
 - [ ] Scheduler
 - [ ] Modules migration
     - [ ] Arknights
-    - [ ] Pcr Clanbattle
+    - [x] Pcr Clanbattle v2
+    - [ ] Pcr Clanbattle v3
     - [ ] Dice
     - [ ] Flac
     - [ ] Group Master
@@ -182,7 +183,7 @@ KokkoroBot 在基础设施与应用层中加一层统一接口 `common_interface
         - [ ] Audio
         - [x] Image
         - [x] Text
-        - [ ] Permission control with admin
+        - [x] Permission control with admin
     - [x] Telegram
         - [ ] Audio
         - [ ] Image
